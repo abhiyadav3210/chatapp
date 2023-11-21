@@ -1,23 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
+import { Route } from 'react-router-dom';
+import Homepage from "./pages/Homepage"
+import Chatpage from './pages/Chatpage';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          dasdsadsadadsd
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React aaaaaa
-        </a>
-      </header>
+      
+<Route path="/" component={Homepage} exact/>
+<Route path="/chats" component={Chatpage} exact />
     </div>
   );
 }
